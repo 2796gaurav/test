@@ -11,6 +11,6 @@
     -   id: black
         name: black
         entry: black --check
-        language: python
+        language: system
         types: [python]
         additional_dependencies: ['black']
