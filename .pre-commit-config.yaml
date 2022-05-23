@@ -5,4 +5,12 @@
         entry: pylint
         language: system
         types: [python]
-        require_serial: true
+        #require_serial: true
+        files: \.py$
+
+    -   id: black
+        name: black
+        entry: black --check
+        language: python
+        types: [python]
+        additional_dependencies: ['black']
