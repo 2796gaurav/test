@@ -1,11 +1,20 @@
-repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.3.0
+-   repo: local
     hooks:
-    -   id: check-yaml
-    -   id: end-of-file-fixer
-    -   id: trailing-whitespace
--   repo: https://github.com/psf/black
-    rev: 21.12b0
-    hooks:
-    -   id: black
+    -   id: pylint
+        name: pylint
+        entry: pylint
+        language: system
+        types: [python]
+        require_serial: true
+    -   id: check-x
+        name: Check X
+        entry: ./bin/check-x.sh
+        language: script
+        files: \.x$
+    -   id: scss-lint
+        name: scss-lint
+        entry: scss-lint
+        language: ruby
+        language_version: 2.1.5
+        types: [scss]
+        additional_dependencies: ['scss_lint:0.52.0']
