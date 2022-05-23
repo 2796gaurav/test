@@ -13,4 +13,4 @@
         entry: black --check
         language: system
         types: [python]
-        additional_dependencies: ['black']
+        #additional_dependencies: ['black']
