@@ -6,15 +6,3 @@
         language: system
         types: [python]
         require_serial: true
-    -   id: check-x
-        name: Check X
-        entry: ./bin/check-x.sh
-        language: script
-        files: \.x$
-    -   id: scss-lint
-        name: scss-lint
-        entry: scss-lint
-        language: ruby
-        language_version: 2.1.5
-        types: [scss]
-        additional_dependencies: ['scss_lint:0.52.0']
